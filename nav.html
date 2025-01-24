@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <!-------->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    
+    .navMenu {
+      font-family: "Advent Pro", sans-serif;
+      padding: 8px;
+      text-align: center;
+      margin: 7px auto;
+      width: fit-content;
+      height: 98px;
+    }
+    
+    .navMenu a {
+      color: #272727;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 6px;
+    }
+    
+    .background {
+      background-color: #ece5f0;
+    }
+    
+    .border {
+      border: 1px solid #cccccc;
+    }
+    
+    .navMenu a:hover {
+      color: #ffff;
+    }
+    
+    body {
+      display: grid;
+      place-items: center;
+    }
+    
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+    }
+    
+    .fill {
+      padding: 0.5%;
+      color: #fff;
+      outline: 0;
+      border: 2px solid black;
+      cursor: pointer;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0);
+      margin: 5px;
+    }
+    
+    .fill::after {
+      content: "";
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 5px;
+      left: 5px;
+      transition: 0.2s;
+    }
+    
+    .fill:hover::after {
+      top: 0px;
+      left: 0px;
+    }
+    
+    .home:hover,
+    .home::after {
+      background-color: #ffbd2f;
+    }
+    
+    .inbox:hover,
+    .inbox::after {
+      background-color: #A7A6DA;
+    }
+    
+    .today:hover,
+    .today::after {
+      background-color: #D74967;
+    }
+    
+    .projects:hover,
+    .projects::after {
+      background: #EFBE7B;
+    }
+    
+    .tasks:hover,
+    .tasks::after {
+      background-color: #E2E4F4;
+    }
+    
+    .recipes:hover,
+    .recipes::after {
+      background-color: #ff4500;
+    }
+    
+    .mind:hover,
+    .mind::after {
+      background-color: #CC6CE7;
+    }
+    
+    .finance:hover,
+    .finance::after {
+      background-color: #B384C0;
+    }
+    
+    .week:hover,
+    .week::after {
+      background-color: #F47066;
+    }
+    
+    .health:hover,
+    .health::after {
+      background-color: #AB5A74;
+    }
+    
+    .media:hover,
+    .media::after {
+      background-color: #bfd641;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navMenu wrapper">
+    <span class="fill home"> <a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house-chimney"></i> Home</a></span>
+    <span class="fill inbox"><a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Inbox</a></span>
+    <span class="fill today"><a id="week" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-day"></i> Today</a></span>
+    <span class="fill week"><a id="week" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Week</a></span>
+    <span class="fill today projects"><a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Projects</a></span>
+    <span class="fill today tasks"><a id="tasks" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-rectangle-list"></i> Tasks</a></span>
+    <span class="fill today finance"> <a id="finance" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-money-bill-trend-up"></i> Finance</a> </span>
+    <span class="fill today health"><a id="health" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-dumbbell"></i> Health</a></span>
+    <span class="fill today mind"> <a id="mind" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-brain"></i> Mind</a></span>
+    <span class="fill today media"><a id="media" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-photo-film"></i> Media</a></span>
+  </nav>
+  <script>
+    let direction = "horizonal";
+    function navigate(id) {
+      if (id == "home") window.open("https://example.com").focus();
+      else if (id == "inbox") window.open("https://example.com").focus();
+      else if (id == "week") window.open("https://example.com").focus();
+      else if (id == "month") window.open("https://example.com").focus();
+      else if (id == "projects")
+        window
+          .open(
+            "https://www.notion.so/Project-Hub-117eda9c3cae81b18862f0c2e96a1e91?pvs=4"
+          )
+          .focus();
+      else if (id == "finance")
+        window.open("https://example.com").focus();
+      else if (id == "tasks") window.open("https://example.com").focus();
+      else if (id == "health") window.open("https://example.com").focus();
+      else if (id == "mind") window.open("https://example.com").focus();
+      else if (id == "media") window.open("https://example.com").focus();
+    }
+  </script>
+</body>
+</html>
+</html>
